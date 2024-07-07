@@ -1,0 +1,91 @@
+<!-- Cookie Consent -->
+<%page expression_filter="h"/>
+<%! from django.utils.translation import gettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.js"></script>
+
+<script>
+function getCookie(cName) {
+  const name = cName + "=";
+  const cDecoded = decodeURIComponent(document.cookie); //to be careful
+  const cArr = cDecoded .split('; ');
+  let res;
+  cArr.forEach(val => {
+      if (val.indexOf(name) === 0) res = val.substring(name.length);
+  })
+  return res;
+}
+
+const concent = getCookie('cookieconsent_status');
+
+const hide_style = !!concent ? ' hidden' : ''
+
+window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+
+    window: '<div dir="${static.dir_rtl()}" role="dialog" tabindex="-1" id="cookiepopup" aria-label="cookieconsent" class="cc-window {{classes}}' + hide_style + '"><!--googleoff: all-->{{children}}<!--googleon: all--></div>',
+
+    palette:{
+      popup: {background: "#323538", text: "#ffffff"},
+      button: {background: "#005379", text: "#ffffff"},
+    },
+    "content": {
+      "message": "${_('This website uses cookies to ensure you get the best experience on our website. If you continue browsing this site, we understand that you accept the use of cookies.')}",
+      "dismiss": "${_('Got it!')}",
+      "link": "${_('Learn more')}",
+    },
+    theme: "classic",
+    "elements": {
+        "dismiss": '<a aria-label="dismiss cookie message" id="dismiss" role=button tabindex="2" class="cc-btn cc-dismiss:focus">{{dismiss}}</a>',
+    },
+    "position": "bottom",
+    "static": "true",
+    onStatusChange: function(consent) {
+      if (consent.status === "dismiss") {
+        console.log("User dismissed the banner.");
+        // **Customize behavior on dismiss here:**
+        // Here are some options:
+  
+        //  - **Display a simplified message:**
+        //    var dismissMessage = document.createElement('div');
+        //    dismissMessage.textContent = "Limited functionality until you accept cookies.";
+        //    document.body.appendChild(dismissMessage);
+  
+        //  - **Disable specific features:**
+        //    var nonEssentialFeature = document.getElementById('nonEssentialFeature');
+        //    nonEssentialFeature.disabled = true;
+  
+        //  - **Do nothing (default behavior):**
+        //    You can choose to take no action on dismiss.
+      } else if (consent.status === "allow") {
+        console.log("User has consented to cookies.");
+        // Perform actions based on user consent (handled elsewhere)
+      } else {
+        console.log("User has denied cookies.");
+        const domain = window.location.hostname
+        document.cookie = "cookieconsent_status=dismiss; expires=Thu Jan 01 2099 00:00:00 UTC; domain="+"."+domain;
+        // Handle user denying cookies (handled elsewhere)
+      }
+    }
+  },
+  function(popup){
+
+    $(".cc-window").on('keydown', function(event) {
+      if (event.keyCode == 27 ){
+        popup.close();
+      }
+    });
+
+    $("#dismiss").on('keydown', function(event) {
+      if (event.keyCode == 13 || event.keyCode == 32 ) {
+        print("asdadasdadasd");
+        set_cookie();
+      }
+      print("asdadasdadasd");
+      popup.onButtonClick(event);
+    });
+  });
+});
+</script>
