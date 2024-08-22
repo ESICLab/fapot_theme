@@ -33,10 +33,11 @@
                 padding: 0 0 70px;
             }
             h1 {
+                font-family: $font-family-heading;
                 font-size: 24px;
                 font-weight: 800;
                 margin: 0 0 8px;
-                line-height: 30px;
+                line-height: 36px;
                 color: #111827;
                 text-align: left;
             }
@@ -178,6 +179,7 @@
                     margin: 0 0 14px;
                 }
                 h2 {
+                    font-family: $font-family-heading;
                     margin: 0 0 14px;
                     color: #111827;
                     font-size: 18px;
@@ -185,6 +187,7 @@
                     font-weight: 600;
                 }
                 h3 {
+                    font-family: $font-family-heading;
                     margin: 0 0 5px;
                     color: #4B5563;
                     font-size: 14px;

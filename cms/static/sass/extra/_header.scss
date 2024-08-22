@@ -8,7 +8,7 @@
   width: 100%;
   box-shadow: 0 1px 2px 0 $shadow-l1;
   margin: 0;
-  padding: 0 $baseline;
+  padding: 0 0;
   background: $white;
 
   header.primary {
@@ -64,10 +64,10 @@
   .branding {
     flex-direction: row;
     display: flex;
-    gap: 8px;
 
     .brand-image {
-      height: 60px;
+      height: 80px;
+      margin: 0;
       max-height: unset !important;
     }
 
@@ -109,6 +109,7 @@
   .nav-account {
     width: auto;
   }
+
 
   // basic layout - nav items
   nav {
@@ -165,7 +166,7 @@
 
   // specific elements - branding
   .branding {
-    padding: ($baseline * 0.75) 0;
+    padding: 0 0;
 
     a {
       display: block;
@@ -377,16 +378,14 @@
   justify-content: center;
   width: 100%;
   background-color: #2d2d2d;
-  margin-left: -20px;
-  padding-right: 40px;
-  height: 140px;
+  height: 4px;
 
   .banner-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 1090px;
-    margin: 24px 0 0 224px;
+    margin: 0 0 0 0px;
 
     h1,
     h2 {
@@ -446,4 +445,8 @@ body.course.view-checklists .nav-course-tools-checklists {
     color: theme-color("primary");
     pointer-events: none;
   }
+}
+
+.wrapper-alert.wrapper-alert-announcement {
+  z-index: 1001;
 }

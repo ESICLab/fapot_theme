@@ -2,8 +2,8 @@
 
 $content_padding_top: 24px;
 $content-padding-bottom: 10px;
-$header-height: 75px;
-$footer-height: 125.5px;
+$header-height: 80px;
+$footer-height: 280px;
 
 body, body.view-profile {
   min-height: initial;
@@ -31,7 +31,11 @@ body, body.view-profile {
   font-family: $font-family-title;
 }
 
-h1, h2, h3, h1 span, h2 span, h3 span, .nav-item {
+h1, h2, h3 {
+  font-family: $font-family-heading;
+}
+
+h1 span, h2 span, h3 span, .nav-item {
   font-family: $font-family-title;
 }
 

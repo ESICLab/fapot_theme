@@ -5,6 +5,9 @@
 // * +Paths
 // * +Grid
 // * +Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap');
+
 // * +Colors - Utility
 // * +Colors - Primary
 // * +Colors - Shadow
@@ -32,8 +35,8 @@ $fg-min-width: 900px;
 
 // +Fonts
 // ====================
-$f-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$f-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+$f-sans-serif: 'Bai Jamjuree', sans-serif !important;
+$f-monospace: 'Bai Jamjuree', sans-serif !important;
 
 // +Colors - Utility
 // ====================

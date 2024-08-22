@@ -61,12 +61,14 @@
     margin: 0 0 20px;
     font-size: 14px;
     color: #6B7280;
+
     @include media-breakpoint-up(md) {
         margin: 0 0 30px;
         font-size: 16px;
         line-height: 20px;
     }
     h2 {
+        
         color: #111827;
         font-size: 20px;
         font-weight: 700;
@@ -275,7 +277,7 @@
                     display: block;
                     margin: 0;
                     h3 {
-                        font-family: $font-family-title;
+                        font-family: $font-family-heading;
                         height: 72px;
                     }
                     .wrapper-course-info-actions {

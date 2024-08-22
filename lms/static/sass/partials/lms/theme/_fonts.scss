@@ -110,3 +110,25 @@
   font-weight: 700;
   font-style: italic;
 }
+
+
+@font-face {
+  font-family: 'DindanMai';
+  src: url('#{$static-path}/fonts/DindanMai-Black.woff') format('woff');
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DindanMai';
+  src: url('#{$static-path}/fonts/DindanMai-Bold.woff') format('woff');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DindanMai';
+  src: url('#{$static-path}/fonts/DindanMai-Medium.woff') format('woff');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}

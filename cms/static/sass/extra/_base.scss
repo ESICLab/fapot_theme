@@ -299,8 +299,8 @@ dl {
 
         position: relative;
         bottom: -($baseline*0.75);
-        width: flex-grid(6, 12);
-
+        //width: flex-grid(6, 12);
+        width: 100%;
         .nav-item {
           display: inline-block;
           vertical-align: top;
@@ -323,6 +323,7 @@ dl {
     &.has-subtitle {
       .nav-actions {
         bottom: -($baseline*1.5);
+        top:-40px;
       }
     }
 

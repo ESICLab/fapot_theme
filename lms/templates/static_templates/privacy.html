@@ -13,7 +13,26 @@
             <%block name="pageheader">${page_header or _("Privacy Policy")}</%block>
         </h1>
         <p>
-            <%block name="pagecontent">${page_content or _("This page left intentionally blank. Feel free to add your own content.")}</%block>
+
+                    <object
+            data="https://www.fapot.or.th/assets/upload/policy/privacy_policy_20211019-1_th.pdf"
+            type="application/pdf"
+            width="100%"
+            height="1000px"
+        >
+            <iframe
+                src="https://www.fapot.or.th/assets/upload/policy/privacy_policy_20211019-1_th.pdf"
+                width="100%"
+                height="1000px"
+                style="border: none;"
+            >
+                <p>
+                    Your browser does not support PDFs.
+                    <a href="https://www.fapot.or.th/assets/upload/policy/privacy_policy_20211019-1_th.pdf">Download the PDF</a>
+                    .
+                </p>
+            </iframe>
+        </object>
         </p>
         <!-- NEW IN INDIGO: add graphic image -->
         <div class="graphic-img">
