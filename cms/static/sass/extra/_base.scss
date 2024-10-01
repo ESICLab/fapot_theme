@@ -40,7 +40,16 @@ body {
 body,
 input,
 button {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+html body{
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+
+html label{
+  font-family: 'Bai Jamjuree', sans-serif;
 }
 
 // removing the outline on any element that we make programmatically focusable

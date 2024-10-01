@@ -39,6 +39,22 @@ h1 span, h2 span, h3 span, .nav-item {
   font-family: $font-family-title;
 }
 
+html body{
+  font-family: 'Bai Jamjuree', sans-serif !important;
+}
+
+html label{
+  font-family: 'Bai Jamjuree', sans-serif !important;
+}
+
+html body label{
+  font-family: 'Bai Jamjuree', sans-serif !important;
+}
+
+div{
+    font-family: 'Bai Jamjuree', sans-serif !important;
+}
+
 // It is necessary to specify `:not(.courseware) >` in order to not affect the style
 // of `#content.content-wrapper` inside the unit iframe in the MFE
 :not(.courseware) > #content.content-wrapper {
@@ -286,6 +302,8 @@ nav.wrapper-preview-menu {
   }
 }
 
+
+
 @import '../../../extra/footer';
 @import '../../../extra/header';
 @import '../../../dashbord/dashbord';
@@ -293,5 +311,6 @@ nav.wrapper-preview-menu {
 @import '../../../courseware/about';
 @import '../../../courseware/bookmarks';
 @import '../../../home/home';
+
 
 

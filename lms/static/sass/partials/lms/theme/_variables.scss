@@ -6,7 +6,7 @@ $font-family-title: 'Bai Jamjuree', sans-serif !important;
 $font-family-heading: 'DindanMai', sans-serif !important;
 $serif: Crimson;
 $f-sans-serif: 'Bai Jamjuree', sans-serif !important;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 // Initialize the Open edX Bootstrap theme
 @import 'edx-bootstrap/sass/open-edx/theme';
 
@@ -15,3 +15,8 @@ $f-sans-serif: 'Bai Jamjuree', sans-serif !important;
 
 $drak: #111827;
 $light-drak: #374151;
+
+.xmodule_display.xmodule_ProblemBlock div.problem .choicegroup label{
+      font-family: 'Bai Jamjuree', sans-serif !important;
+}
+

@@ -1,0 +1,216 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import gettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<%
+course_mode_class = course_mode if course_mode else ''
+%>
+
+<main class="accomplishment accomplishment-main">
+
+    <div class="wrapper-accomplishment-rendering">
+        <div class="accomplishment-rendering">
+            <span class="deco-corner deco-corner-tl"></span>
+            <span class="deco-corner deco-corner-tr"></span>
+            <span class="deco-corner deco-corner-bl"></span>
+            <span class="deco-corner deco-corner-br"></span>
+<!-- 
+            <div class="accomplishment-type">
+                <span class="accomplishment-type-symbol">
+                    <img class="src" src="/static/certificates/images/ico-${course_mode_class}.png" alt="Image for course mode of type ${course_mode_class}">
+                </span>
+
+                <span class="accomplishment-type-label hd-3">${document_title}</span>
+            </div>
+
+            <div class="wrapper-statement-and-signatories">
+                <div class="accomplishment-statement">
+                    <p class="accomplishment-statement-lead">
+                        <strong class="accomplishment-recipient hd-1 emphasized">$Hello {accomplishment_copy_name}</strong>
+                        <span class="accomplishment-summary copy copy-lead">${accomplishment_copy_description_full}</span>
+
+                        <span class="accomplishment-course hd-1 emphasized">
+                            <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>
+                            <span class="accomplishment-course-number">${course_number}</span>:
+                            <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
+                        </span>
+                    </p>
+
+                    <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p>
+                </div>
+
+                % if mode != 'base':
+                <div class="accomplishment-signatories">
+                    <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
+
+                    <div class="wrapper-signatories">
+                        <div class="list-signatories">
+                            % if certificate_data:
+                                % for signatory in certificate_data.get('signatories', []):
+                                    % if signatory.get('signature_image_path'):
+                                        <div class="signatory">
+                                            <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+
+                                            <h4 class="signatory-name hd-5">${signatory['name']}</h4>
+                                            <p class="signatory-credentials copy copy-micro">
+                                                <span class="role">${signatory['title']}</span>
+                                                <span class="organization">${signatory['organization']}</span>
+                                            </p>
+                                        </div>
+                                    % endif
+                                % endfor
+                            % endif
+                        </div>
+                    </div>
+                </div>
+                % endif
+            </div> 
+
+            <div class="accomplishment-orgs">
+                <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
+
+                <ul class="wrapper-orgs list-orgs">
+                    <li class="wrapper-organization">
+                        <div class="organization organization-edX">
+                            <img class="organization-logo" src="${logo_src}" alt="${platform_name}">
+                        </div>
+                    </li>
+
+                    % if organization_logo:
+                    <li class="wrapper-organization">
+                        <div class="organization">
+                            <img class="organization-logo" src="${organization_logo.url}" alt="${platform_name}">
+                        </div>
+                    </li>
+                    % endif
+                </ul>
+            </div>-->
+
+                <div class="certificate-wrapper">
+                <header>
+            <!-- Top pink line -->
+            <div class="top-line"></div>
+
+            <!-- Content inside header -->
+            <div class="header-content">
+                <!-- Text "This is to certify that" -->
+                <div class="header-text">
+                    <p>This is to certify that</p>
+                    <!-- 2nd pink line aligned with the banner -->
+                    <div class="second-line"></div>
+                </div>
+
+                <!-- Banner image moved to the right and reduced size -->
+                                <div class="header-img">
+                    <svg width="273" height="111" viewBox="0 0 204 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- SVG content goes here -->
+<path d="M203.6 0.110001H-0.0100098V82.87H203.6V0.110001Z" fill="#EE395F"/>
+<path d="M6.76001 33.88C6.76001 30.94 8.53001 29.02 12.82 29.02H16.81V27.67C16.81 25.9 15.76 24.76 13.36 24.76C11.56 24.76 10.21 25.39 9.37 26.38L7.33002 24.37C8.56002 23.11 10.27 22 13.42 22C14.05 22 14.65 22.06 15.22 22.18H21.76V24.88L19.18 24.85C19.69 25.66 19.96 26.62 19.96 27.58V38.69H16.81V31.67H12.82C10.75 31.67 9.84998 32.36 9.84998 33.89C9.84998 35.51 10.72 36.17 12.7 36.17C13.33 36.17 14.05 36.11 14.5 36.02V38.57C14.02 38.72 13.18 38.81 12.37 38.81C8.59 38.81 6.76001 37.34 6.76001 33.89V33.88Z" fill="white"/>
+<path d="M28.77 38.69C25.86 38.69 24.84 37.76 24.84 34.88V23.71C26.58 22.75 29.1 22 31.32 22C34.38 22 36.48 22.93 37.44 25.21C37.86 26.17 38.07 27.04 38.07 28.9V38.69H34.89V28.99C34.89 27.55 34.77 26.95 34.47 26.32C33.96 25.27 32.94 24.85 31.08 24.85C30.15 24.85 28.95 25.06 28.02 25.42V34.61C28.02 35.63 28.29 35.93 29.22 35.93H31.32V38.69H28.77Z" fill="white"/>
+<path d="M48.98 38.69V27.79C48.98 25.69 48.05 24.79 46.1 24.79C44.42 24.79 43.37 25.42 42.65 26.29L40.67 24.37C41.75 23.08 43.58 22 46.31 22C50.12 22 52.13 23.95 52.13 27.61V38.69H48.98Z" fill="white"/>
+<path d="M56.81 32.38V22.17H59.99V32.26C59.99 34.93 61.16 36.01 63.29 36.01C65.42 36.01 66.59 34.93 66.59 32.26V22.17H69.77V32.38C69.77 36.76 67.19 38.86 63.29 38.86C59.39 38.86 56.81 36.76 56.81 32.38Z" fill="white"/>
+<path d="M64.89 19.47C62.28 19.47 61.23 18.3 61.23 16.14V14.88H64.14V15.75C64.14 16.44 64.41 16.8 65.1 16.8H73V19.47H64.89Z" fill="white"/>
+<path d="M75.16 36.5C74.62 35.57 74.47 34.37 74.47 32.42V22.18H77.65V32.06C77.65 33.38 77.71 34.28 78.07 34.88C78.49 35.63 79.36 36.08 80.47 36.08C82.84 36.08 84.19 34.19 84.19 31.76V22.18H87.37V38.69H84.31V36.65C83.47 38.06 81.82 38.87 79.87 38.87C77.74 38.87 76.03 38.03 75.16 36.5Z" fill="white"/>
+<path d="M203.48 0.110001H94.64V43.98H203.48V0.110001Z" fill="black"/>
+<path d="M94.64 43.98H0.0300293V82.87H94.64V43.98Z" fill="black"/>
+<path d="M15.55 65.31V56.75H12.82V55.4H19.78V56.75H17.05V65.31H15.55Z" fill="white"/>
+<path d="M22.89 65.31V55.4H24.39V59.63H28.41V55.4H29.91V65.31H28.41V60.98H24.39V65.31H22.89Z" fill="white"/>
+<path d="M32.72 65.31L36.35 55.4H37.56L41.19 65.31H39.59L38.91 63.32H35L34.32 65.31H32.72ZM35.45 62.04H38.5L37 57.64L35.45 62.04Z" fill="white"/>
+<path d="M44 65.31V55.4H45.5V65.31H44Z" fill="white"/>
+<path d="M54.22 65.31V55.4H60.55V56.75H55.72V59.77H59.84V61.12H55.72V65.31H54.22Z" fill="white"/>
+<path d="M63.76 65.31V55.4H65.26V65.31H63.76Z" fill="white"/>
+<path d="M69.25 65.31V55.4H70.75V63.96H75.52V65.31H69.24H69.25Z" fill="white"/>
+<path d="M78.63 65.31V55.4H80.13L83.03 61.57L85.87 55.4H87.37V65.31H85.87V58.68L83.59 63.51H82.48L80.14 58.68V65.31H78.64H78.63Z" fill="white"/>
+<path d="M101.79 65.31V55.4H104.23V65.31H101.79Z" fill="white"/>
+<path d="M111.11 65.31V55.4H113.24L116.41 60.39V55.4H118.85V65.31H116.72L113.55 60.33V65.31H111.11Z" fill="white"/>
+<path d="M125.73 64.08L127.29 62.52C127.81 63.04 128.71 63.22 129.5 63.22C130.46 63.22 130.92 62.9 130.92 62.33C130.92 62.09 130.86 61.9 130.73 61.75C130.6 61.62 130.4 61.53 130.08 61.49L128.88 61.32C128 61.19 127.33 60.9 126.89 60.44C126.43 59.97 126.21 59.3 126.21 58.45C126.21 56.64 127.57 55.32 129.83 55.32C131.25 55.32 132.32 55.65 133.17 56.5L131.64 58.03C131.01 57.4 130.19 57.44 129.76 57.44C128.91 57.44 128.56 57.93 128.56 58.36C128.56 58.49 128.6 58.67 128.75 58.82C128.88 58.95 129.08 59.07 129.43 59.11L130.63 59.28C131.52 59.41 132.16 59.68 132.58 60.1C133.11 60.62 133.32 61.35 133.32 62.27C133.32 64.29 131.58 65.39 129.49 65.39C127.97 65.39 126.73 65.11 125.73 64.08Z" fill="white"/>
+<path d="M142.63 65.31V57.57H140.19V55.4H147.5V57.57H145.06V65.31H142.62H142.63Z" fill="white"/>
+<path d="M154.38 65.31V55.4H156.82V65.31H154.38Z" fill="white"/>
+<path d="M166.13 65.31V57.57H163.69V55.4H171V57.57H168.56V65.31H166.12H166.13Z" fill="white"/>
+<path d="M177.88 61.83V55.4H180.32V61.78C180.32 62.7 180.82 63.23 181.63 63.23C182.44 63.23 182.97 62.7 182.97 61.78V55.4H185.41V61.83C185.41 64 183.7 65.39 181.64 65.39C179.58 65.39 177.89 64 177.89 61.83H177.88Z" fill="white"/>
+<path d="M192.28 65.31V55.4H199.02V57.57H194.72V59.23H198.4V61.4H194.72V63.14H199.02V65.31H192.28Z" fill="white"/>
+<path d="M101.79 38.69V22.18H104.97V28.27L111.6 22.18H115.47V22.3L111.39 26.02C113.43 26.32 114.81 28.03 114.81 30.82V38.69H111.63V31.07C111.63 29.15 110.94 28.01 109.23 28.01L104.97 31.91V38.69H101.79Z" fill="white"/>
+<path d="M120.2 36.5C119.66 35.57 119.51 34.37 119.51 32.42V22.18H122.69V32.06C122.69 33.38 122.75 34.28 123.11 34.88C123.53 35.63 124.4 36.08 125.51 36.08C127.88 36.08 129.23 34.19 129.23 31.76V22.18H132.41V38.69H129.35V36.65C128.51 38.06 126.86 38.87 124.91 38.87C122.78 38.87 121.07 38.03 120.2 36.5Z" fill="white"/>
+<path d="M127.52 19.47C124.91 19.47 123.86 18.3 123.86 16.14V14.88H126.77V15.75C126.77 16.44 127.04 16.8 127.73 16.8H135.63V19.47H127.52Z" fill="white"/>
+<path d="M139.11 38.63L135.48 27.64H138.78L141.51 36.08C142.56 36.17 143.34 35.84 143.76 34.85C144.12 33.98 144.24 33.17 144.24 30.59C144.24 27.53 144.09 26.63 143.73 25.88C143.37 25.1 142.74 24.98 141.81 24.98H140.79V22.19H141.96C144.84 22.19 145.98 22.73 146.64 24.17C147.3 25.61 147.48 26.72 147.48 30.59C147.48 33.59 147.18 34.91 146.61 36.17C145.65 38.33 143.76 38.87 141.45 38.87C140.7 38.87 139.71 38.75 139.11 38.63Z" fill="white"/>
+<path d="M156.04 38.69C153.28 38.69 152.47 37.91 152.47 35.42V20.08C152.47 18.19 153.28 16.39 154.45 15.43H148.69V12.76H158.54V15.19C156.77 15.67 155.6 17.44 155.6 19.84V35.06C155.6 35.69 155.87 35.93 156.5 35.93H157.88V38.69H156.05H156.04Z" fill="white"/>
+<path d="M161.12 38.69V22.18H164.18V24.22C165.11 22.93 166.67 22 168.86 22C172.58 22 174.38 24.49 174.38 28.45V38.69H171.2V28.57C171.2 26.29 170.51 24.82 168.11 24.82C165.89 24.82 164.3 26.32 164.3 28.84V38.69H161.12Z" fill="white"/>
+<path d="M178.59 33.4C178.59 31.18 179.46 30.04 180.93 29.38C179.58 28.9 178.53 27.7 178.53 25.69C178.53 23.26 179.82 22.18 182.28 22.18H184.95V24.91H182.73C182.04 24.91 181.68 25.18 181.68 26.08C181.68 27.13 182.16 27.67 183.06 27.91C183.87 28.12 184.41 28.12 186.48 28.12V30.67C184.14 30.67 183.48 30.7 182.79 30.97C181.98 31.3 181.77 31.96 181.77 33.28C181.77 35.32 182.94 36.07 185.25 36.07C188.13 36.07 188.85 35.11 188.85 32.11V22.17H192.03V32.23C192.03 37.36 189.51 38.86 185.25 38.86C181.23 38.86 178.59 37.12 178.59 33.4Z" fill="white"/>
+</svg>
+
+                    <!-- Rest of the SVG -->
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+              <main>
+            <div class="user-name">
+            ${accomplishment_copy_name}
+            </div>
+    <div class="message">
+        has successfully completed the online course 
+    </div>
+
+        </main>
+
+                    <div class="certificate-footer">
+                <div class="certificate-footer-logo">
+                    <img src="${static.certificate_asset_url('fapot-logo')}"/>
+                </div>
+                <div class ="certificate-signature">
+                    <img src="${static.certificate_asset_url('signature')}"/>
+                    <div class="signature-line"></div>
+                </div>
+                <div class ="certificate-signature-text">
+                    <h2>Chalida Uabumrungjit</h2>
+                    <h3>Director of Film Archieve (Public Organization)</h3>
+                    <h3>${certificate_date_issued}</h3>
+                </div>
+                <div class ="certificate-class-title">
+                    <h1>${accomplishment_copy_course_name}</h1>
+                    <h2>${accomplishment_copy_course_org} ${course_number}</h2>
+                    <h3>learning.fapot.or.th</h3>
+                </div>
+                <div class ="certificate-number">
+                    ${certificate_id_number}
+                </div>
+
+            
+
+    </div>
+            
+
+    </div>
+        </div>
+    </div>
+
+    <div class="wrapper-accomplishment-metadata">
+        <div class="accomplishment-metadata">
+            <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about}</h2>
+
+            <div class="wrapper-metadata">
+                <dl class="metadata accomplishment-recipient">
+                    <dt class="label sr-only">${_("Awarded to:")}</dt>
+                    <dd class="value copy copy-meta">
+                        <span class="recipient-img">
+                            <img class="src" src="/static/certificates/images/demo-user-profile.png" alt="Recipient Image">
+                        </span>
+                        <div class="recipient-details">
+                            <h3 class="recipient-name">${accomplishment_copy_name}</h3>
+                            <p class="recipient-username">${accomplishment_copy_username} @ learning.fapot.or.th</p>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="metadata accomplishment-id">
+                    <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
+                    <dd class="value copy copy-base">${certificate_id_number}</dd>
+                </dl>
+                <dl class="metadata accomplishment-date">
+                    <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
+                    <dd class="value copy copy-base">${certificate_date_issued}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+</main>
